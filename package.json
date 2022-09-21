@@ -1,0 +1,14 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "yarn run cypress open",
+    "cy:run": "yarn cypress run --record --spec 'cypress/test/portal/testHomePage.spec.cy.ts'"
+  },
+  "dependencies": {
+    "cypress": "^10.8.0",
+    "typescript": "^4.8.3"
+  }
+}

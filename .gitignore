@@ -1,0 +1,4 @@
+cypress/downloads/
+cypress/e2e/
+cypress/fixtures/example.json
+node_modules/
