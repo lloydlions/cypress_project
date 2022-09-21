@@ -1,17 +1,20 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
-  projectId: "128076ed-9868-4e98-9cef-98dd8b705d75",
+  projectId: 'v4obku',
 
   e2e: {
-    baseUrl: "http://automationpractice.com",
+    baseUrl: "https://www.automationpractice.com",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-      specPattern: "cypress/test/*/*.ts"
+      specPattern: "cypress/test/*/*.ts",
+      screenshotsFolder: "cypress/screenshot",
+      videosFolder: "cypress/videos"
   },
 
   env: {
-    homepage: "/index.php"
+    homepage: "/index.php",
+    record_key: "2f6dc5ef-b57c-4802-9ba3-8f17dae4ce9c"
   }
 });
