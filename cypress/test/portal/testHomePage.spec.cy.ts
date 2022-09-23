@@ -1,17 +1,20 @@
-import homePage from '../../pages/homePage'
+/// <reference types="cypress-xpath" />
 
-describe('Cypress exploration - www.automationpractice.com', () => {
+import homePage from "../../pages/homePage";
 
-  before(()=>{
+describe("Cypress exploration - www.automationpractice.com", () => {
+  before(() => {
     const home = new homePage();
-    home.navigateToHomePage()
-  })
+    home.navigateToHomePage();
+  });
 
-  it('Verify webpage title', () => {
-    cy.title().should('eq','My Store');
-  })
+  it("Verify webpage title", () => {
+    cy.title().should("eq", "My Store");
+  });
 
-  it('Verify title banner is present', ()=>{
-    
-  })
-})
+  it("Verify title banner is present", () => {
+    cy.xpath("//div[@class='container']//img[@class='img-responsive']")
+      .should("have.attr", "src")
+      .should("include", "sale70.png");
+  });
+});
