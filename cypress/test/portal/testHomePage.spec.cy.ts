@@ -17,4 +17,27 @@ describe("Cypress exploration - www.automationpractice.com", () => {
       .should("have.attr", "src")
       .should("include", "sale70.png");
   });
+
+  it("Verify header", () => {
+    const header = {
+      login: "a.login",
+      contact: "#contact-link",
+      callUs: ".shop-phone",
+      headerLogo: "#header_logo",
+      shoppingCart: ".shopping_cart",
+    };
+
+    Object.keys(header).forEach((key) => {
+      cy.get(header[key]).should("be.visible");
+    });
+
+    cy.xpath("//form[@id='searchbox']//input[@id='search_query_top']").should(
+      "be.visible"
+    );
+    cy.xpath("//form[@id='searchbox']//button[@name='submit_search']").should(
+      "be.visible"
+    );
+  });
+
+  it("verify menu", () => {});
 });
