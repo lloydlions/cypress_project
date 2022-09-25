@@ -39,5 +39,15 @@ describe("Cypress exploration - www.automationpractice.com", () => {
     );
   });
 
-  it("verify menu", () => {});
+  it("verify menu-categories", () => {
+    const categories = [
+      'Women', 'Dresses', 'T-shirts'
+    ]
+    for(let category of categories){
+      cy.xpath(`//a[text()='${category}']`).should(
+      "be.visible"
+      );
+    }
+  });
+
 });

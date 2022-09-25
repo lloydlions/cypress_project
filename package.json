@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "cy:open": "yarn run cypress open",
-    "cy:run": "yarn cypress run --record --spec 'cypress/test/portal/testHomePage.spec.cy.ts'"
+    "cy:run": "yarn cypress run --record --key 2f6dc5ef-b57c-4802-9ba3-8f17dae4ce9c --spec 'cypress/test/portal/testHomePage.spec.cy.ts'"
   },
   "dependencies": {
     "cypress": "^10.8.0",
