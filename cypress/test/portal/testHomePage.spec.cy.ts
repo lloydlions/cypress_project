@@ -39,7 +39,7 @@ describe("Cypress exploration - www.automationpractice.com", () => {
     );
   });
 
-  it("verify menu-categories", () => {
+  it("Verify menu-categories", () => {
     const categories = [
       'Women', 'Dresses', 'T-shirts'
     ]
@@ -49,5 +49,11 @@ describe("Cypress exploration - www.automationpractice.com", () => {
       );
     }
   });
+
+  it('Verify left panel image slider', ()=>{
+    cy.get(".homeslider-container").not(".bx-clone").should("be.visible");
+
+
+  })
 
 });
