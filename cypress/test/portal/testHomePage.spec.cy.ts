@@ -52,8 +52,26 @@ describe("Cypress exploration - www.automationpractice.com", () => {
 
   it('Verify left panel image slider', ()=>{
     cy.get(".homeslider-container").not(".bx-clone").should("be.visible");
-
-
+    cy.get(".homeslider-container").not(".bx-clone").should('have.length', 3);
   })
+
+  it('Verify nav-product tabs', ()=>{
+    cy.xpath('//a[@class="homefeatured" and text()="Popular"]').should("be.visible");
+    cy.xpath('//a[@class="blockbestsellers" and text()="Best Sellers"]').should("be.visible");
+  })
+
+  it('Verify active nav-product tab on select', ()=>{
+    cy.xpath('//a[@class="homefeatured" and text()="Popular"]/parent::li').should('have.class','active');
+    cy.get('#homefeatured').find('li').should('be.gt', 0);
+
+    cy.xpath('//a[@class="blockbestsellers" and text()="Best Sellers"]/parent::li').click().then(()=>{
+      cy.xpath('//a[@class="blockbestsellers" and text()="Best Sellers"]/parent::li').should('have.class','active');
+      cy.get('#blockbestsellers').find('li').should('be.gt', 0);
+    })
+  })
+
+  /**
+   * I wont proceed anymore on the remaining elements since this is just for exploration only.
+   */
 
 });
