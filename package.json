@@ -5,10 +5,12 @@
   "license": "MIT",
   "scripts": {
     "cy:open": "yarn run cypress open",
-    "cy:run": "yarn cypress run --record --key 2f6dc5ef-b57c-4802-9ba3-8f17dae4ce9c --spec 'cypress/test/portal/testHomePage.spec.cy.ts'"
+    "cy:run": "yarn cypress run --record --key 2f6dc5ef-b57c-4802-9ba3-8f17dae4ce9c --spec 'cypress/test/portal/testHomePage.spec.cy.ts'",
+    "cy:run2": "yarn cypress run --record --key 2f6dc5ef-b57c-4802-9ba3-8f17dae4ce9c --spec 'cypress/test/portal/testHomePage.spec.cy.ts'"
   },
   "dependencies": {
     "cypress": "^10.8.0",
+    "cypress-real-events": "^1.7.1",
     "cypress-xpath": "^2.0.1",
     "typescript": "^4.8.3"
   }
