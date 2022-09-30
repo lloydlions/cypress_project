@@ -77,6 +77,4 @@ describe("Cypress exploration - www.automationpractice.com", () => {
         cy.get("#blockbestsellers").find("li").should("be.gt", 0);
       });
   });
-
-  it();
 });

@@ -6,7 +6,7 @@ describe("Cypress exploration - www.automationpractice.com", () => {
     home.navigateToHomePage();
   });
 
-  it("Functional test", () => {
+  it("Functional test - I want to see Evening Dresses section.", () => {
     home.clickNavProductCategory("Dresses");
   });
 });
